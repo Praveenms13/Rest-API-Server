@@ -1,0 +1,13 @@
+api_tool/
+
+api/.htaccess
+
+api/libs/Auth.class.php
+
+api/libs/OAuth.class.php
+
+api/REST.api.php
+
+.htaccess
+
+mail.php
