@@ -10,4 +10,6 @@ api/REST.api.php
 
 .htaccess
 
+REST_API_Framework/
+
 mail.php
