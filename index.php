@@ -56,6 +56,20 @@
                 margin: 0;
                 padding: 0;
             }
+
+            .hero {
+                border: 1px solid #e5e5e5;
+                border-radius: 10px;
+                margin-top: 80px;
+                background-color: #EEF2F5;
+            }
+
+            @media screen and (max-width: 500px) {
+                .hero {
+                    border: 0px solid #e5e5e5;
+                    background-color: #fff;
+                }
+            }
         </style>
 
 
