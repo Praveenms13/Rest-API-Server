@@ -5,6 +5,27 @@
     <html lang="en">
 
     <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            /* Variables */
+            :root {
+                --primary-font-family: 'Poppins', sans-serif;
+                --light-white: #f5f8fa;
+                --gray: #5e6278;
+                --gray-1: #e3e3e3;
+            }
+
+            a {
+                font-family: var(--primary-font-family);
+            }
+        </style>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Notes App</title>
@@ -13,6 +34,7 @@
         <link rel="icon" href="https://img.icons8.com/fluency/48/null/edit-property--v1.png">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
+                <img src="https://img.icons8.com/color/48/null/goodnotes.png" alt="">
                 <a class="navbar-brand" href="#!">Notes App</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -31,24 +53,22 @@
                             </ul>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Login
-                        </button>
-                    </form>
+                    <style>
+                        a {
+                            text-decoration: none;
+                            color: black;
+                        }
+                    </style>
+                    <a href = "UserAuth/loginUser.php" class="btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Login
+                    </a>
                 </div>
             </div>
         </nav>
         <style type="text/css">
-            @font-face {
-                font-family: Roboto;
-                src: url("chrome-extension://mcgbeeipkmelnpldkobichboakdfaeon/css/Roboto-Regular.ttf");
-            }
-
             html,
             body {
-                font-family: Roboto;
                 font-size: 16px;
                 line-height: 1.5;
                 color: #333;
@@ -68,6 +88,7 @@
                 .hero {
                     border: 0px solid #e5e5e5;
                     background-color: #fff;
+                    margin-top: 10px;
                 }
             }
         </style>
@@ -85,7 +106,7 @@
                             Capture important ideas and information in ways that help you stay productive.
                         </div>
                         <div class="cta">
-                            <a href="UserAuth/login.php" class="button-primary">
+                            <a href="UserAuth/signupUser.php" class="button-primary">
                                 Sign up for free
                             </a>
                         </div>

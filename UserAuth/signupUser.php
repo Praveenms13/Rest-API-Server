@@ -54,63 +54,7 @@
       font-weight: bold;
     }
 
-    .navbar-toggle {
-      display: block;
-    }
-
-    .navbar-toggler {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-    }
-
-    .navbar-toggler:focus {
-      outline: none;
-    }
-
-    .navbar-toggler-icon {
-      display: block;
-      width: 25px;
-      height: 2px;
-      background-color: #000;
-      position: relative;
-      transition: all 0.2s ease-in-out;
-    }
-
-    .navbar-toggler-icon::before,
-    .navbar-toggler-icon::after {
-      content: "";
-      width: 100%;
-      height: 100%;
-      background-color: #000;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transition: all 0.2s ease-in-out;
-    }
-
-    .navbar-toggler-icon::before {
-      transform: translateY(-8px);
-    }
-
-    .navbar-toggler-icon::after {
-      transform: translateY(8px);
-    }
-
-    .navbar-toggle.active .navbar-toggler-icon {
-      background-color: transparent;
-    }
-
-    .navbar-toggle.active .navbar-toggler-icon::before {
-      transform: rotate(45deg) translate(4px, 4px);
-    }
-
-    .navbar-toggle.active .navbar-toggler-icon::after {
-      transform: rotate(-45deg) translate(4px, -4px);
-    }
-
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 300px) {
       .navbar-menu {
         display: flex;
       }
@@ -128,12 +72,12 @@
       <div class="navbar-logo">
         <img src="https://img.icons8.com/color/48/null/goodnotes.png" alt="">
         &nbsp;&nbsp;
-        <a href="#">Notes App</a>
+        <a href="#">Notes</a>
       </div>
       <ul class="navbar-menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Login</a></li>
-        <li><a href="#">About</a></li>
+        <li><a class="btn btn-outline-primary" href="../index.php" role="button">Home</a>
+        </li>
+        <li><a class="btn btn-outline-primary" href="loginUser.php" role="button">Login</a></li>
       </ul>
       <div class="navbar-toggle">
         <button type="button" class="navbar-toggler">
@@ -207,15 +151,8 @@
             <h3 class="text-dark fw-bolder fs-4 mb-2">Create an Account</h3>
 
             <div class="fw-normal text-muted mb-2">
-              Already have an account? <a href="index.html" class="text-primary fw-bold text-decoration-none">Sign
-                in
-                here</a>
+              Already have an account? <a href="loginUser.php" class="text-primary fw-bold text-decoration-none">Login</a>
             </div>
-            <div class="text-center text-muted text-uppercase mb-2">or</div>
-            <a href="#" class="btn btn-light login_with w-100 mb-4">
-              <img src="https://img.icons8.com/fluency/48/null/google-logo.png" class="img-fluid me-3">Sign in with
-              Google</a>
-            </a>
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="floatingLastName" placeholder="username">
               <label for="floatingInput">Username</label>
@@ -241,6 +178,11 @@
               </label>
             </div>
             <button type="submit" class="btn btn-primary submit_btn w-100 my-4">Continue</button>
+            <div class="text-center text-muted text-uppercase mb-2">or</div>
+            <a href="#" class="btn btn-light login_with w-100 mb-4">
+              <img src="https://img.icons8.com/fluency/48/null/google-logo.png" class="img-fluid me-3">Sign in with
+              Google</a>
+            </a>
           </form>
         </div>
       </div>
