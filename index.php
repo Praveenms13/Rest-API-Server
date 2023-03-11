@@ -1,159 +1,325 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Notes App</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/LineIcons.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="https://img.icons8.com/nolan/64/sticky-notes.png">
+</head>
+
 <body>
-    <html lang="en">
+    <header class="header-area">
+        <div class="navgition navgition-transparent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="#">
+                                <img
+                                    src="https://img.icons8.com/external-rabit-jes-outline-color-rabit-jes/62/null/external-note-mobile-rabit-jes-outline-color-rabit-jes.png" />
+                            </a>
 
-    <head>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarOne"
+                                aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
 
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarOne">
+                                <ul class="navbar-nav m-auto">
+                                    <li class="nav-item active">
+                                        <a class="page-scroll" href="#home">HOME</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#service">SERVICES</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="#pricing">AVAILABILITY</a>
+                                    </li>
+                                </ul>
+                            </div>
 
-            /* Variables */
-            :root {
-                --primary-font-family: 'Poppins', sans-serif;
-                --light-white: #f5f8fa;
-                --gray: #5e6278;
-                --gray-1: #e3e3e3;
-            }
+                            <div class="navbar-social d-none d-sm-flex align-items-center">
+                                <span>FOLLOW ME</span>
+                                <ul>
+                                    <li><a target="_blank" href="https://praveen.selfmade.one/"><i
+                                                class="lni-hand"></i></a></li>
+                                    <li><a target="_blank" href="https://www.instagram.com/praveen.ms_13/"><i
+                                                class="lni-instagram-original"></i></a></li>
+                                    <li><a target="_blank" href="https://github.com/Praveenms13"><i
+                                                class="lni-github"></i></a></li>
+                                    <li><a target="_blank"
+                                            href="https://www.linkedin.com/in/m-s-praveen-kumar-9036671bb/?original_referer=https%3A%2F%2Fpraveen.selfmade.one%2F"><i
+                                                class="lni-linkedin-original"></i></a></li>
+                                    <li><a target="_blank" href="https://twitter.com/Praveen61041635"><i
+                                                class="lni-twitter-original"></i></a></li>
+                                    <li><a target="_blank"
+                                            href="https://open.spotify.com/playlist/5gI1ovoZO4R73hTicTzeqY"><i
+                                                class="lni-spotify-original"></i></a></li>
+                                </ul>
+                            </div>
+                        </nav> <!-- navbar -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- navgition -->
 
-            a {
-                font-family: var(--primary-font-family);
-            }
-        </style>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Notes App</title>
-        <link rel="stylesheet" type="text/css" href="./_resources/styleJunk.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <link rel="icon" href="https://img.icons8.com/fluency/48/null/edit-property--v1.png">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container px-4 px-lg-5">
-                <img src="https://img.icons8.com/color/48/null/goodnotes.png" alt="">
-                <a class="navbar-brand" href="#!">Notes App</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">Developer</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#!">API`s</a></li>
-                                <li><a class="dropdown-item" href="#!">OAuth 2.0</a></li>
+        <div id="home" class="header-hero bg_cover"
+            style="background-image: url(https://images.pexels.com/photos/317356/pexels-photo-317356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-10">
+                        <div class="header-content text-center">
+                            <h3 class="header-title">Handcoded API Based Notes App !</h3>
+                            <p class="text">A simple, customizable, and, beautiful notes app for students who can take
+                                nottes and save it more securely!</p>
+                            <ul class="header-btn">
+                                <li><a class="main-btn btn-one" href="UserAuth/loginUser.php">Login</a></li>
+                                <li><a class="main-btn btn-two"
+                                        href="UserAuth/signupUser.php">Sign Up <i
+                                            class="lni-play"></i></a></li>
                             </ul>
+                        </div> <!-- header content -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+            <div class="header-shape">
+                <img src="assets/images/header-shape.svg" alt="">
+            </div>
+        </div> <!-- header content -->
+    </header>
+
+    <section id="service" class="services-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title pb-10">
+                        <h4 class="title">Crafted For</h4>
+                        <p class="text">All the Students as well as Developers to make use of API's and OAuth 2.0!</p>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="services-content mt-40 d-sm-flex">
+                                <div class="services-icon">
+                                    <i class="lni-bolt"></i>
+                                </div>
+                                <div class="services-content media-body">
+                                    <h4 class="services-title">API' s</h4>
+                                    <p class="text">An API that conforms to the design principles of the REST, or
+                                        representational state transfer architectural style</br> where used.</p>
+                                </div>
+                            </div> <!-- services content -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="services-content mt-40 d-sm-flex">
+                                <div class="services-icon">
+                                    <i class="lni-bulb"></i>
+                                </div>
+                                <div class="services-content media-body">
+                                    <h4 class="services-title">OAuth 2.0</h4>
+                                    <p class="text">OAuth 2.0, which stands for “Open Authorization”,</br>is a standard
+                                        designed to allow a website or application to access resources hosted by other
+                                        web apps on behalf of a user.</p>
+                                </div>
+                            </div> <!-- services content -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="services-content mt-40 d-sm-flex">
+                                <div class="services-icon">
+                                    <i class="lni-brush"></i>
+                                </div>
+                                <div class="services-content media-body">
+                                    <h4 class="services-title">Save Notes</h4>
+                                    <p class="text">You can create a seperate folder</br>for each and every notes.</p>
+                                </div>
+                            </div> <!-- services content -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="services-content mt-40 d-sm-flex">
+                                <div class="services-icon">
+                                    <i class="lni-bar-chart"></i>
+                                </div>
+                                <div class="services-content media-body">
+                                    <h4 class="services-title">App Responsive</h4>
+                                    <p class="text">App is more responsive for </br>mobile and desktop.</p>
+                                </div>
+                            </div> <!-- services content -->
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- row -->
+            </div> <!-- row -->
+        </div> <!-- conteiner -->
+
+        <div class="services-image d-lg-flex align-items-center">
+            <div class="image">
+                <img src="assets/images/services.png" alt="Services">
+            </div>
+        </div> <!-- services image -->
+    </section>
+
+    <section id="pricing" class="pricing-area">
+        <div class="container">
+            <div class="download_app">
+                <div class="download_shape">
+                    <img src="assets2/images/shape-5.svg" alt="">
+                </div>
+                <div class="download_shape_2">
+                    <img src="assets2/images/shape-6.png" alt="">
+                </div>
+                <div class="download_app_content">
+                    <h3 class="download_title">Download The App</h3>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod.</p>
+                    <ul>
+                        <li>
+                            <a class="d-flex align-items-center" href="#">
+                                <span class="icon">
+                                    <i class="lni lni-android"></i>
+                                </span>
+                                <span class="content media-body">
+                                    <h6 class="title">Play Store</h6>
+                                    <p>Download Now</p>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="d-flex align-items-center" href="#">
+                                <span class="icon">
+                                    <i class="lni lni-apple"></i>
+                                </span>
+                                <span class="content">
+                                    <h6 class="title">App Store</h6>
+                                    <p>Download Now</p>
+                                </span>
+                            </a>
                         </li>
                     </ul>
-                    <style>
-                        a {
-                            text-decoration: none;
-                            color: black;
-                        }
-                    </style>
-                    <a href = "UserAuth/loginUser.php" class="btn btn-outline-dark" type="submit">
-                        <i class="bi-cart-fill me-1"></i>
-                        Login
-                    </a>
-                </div>
-            </div>
-        </nav>
-        <style type="text/css">
-            html,
-            body {
-                font-size: 16px;
-                line-height: 1.5;
-                color: #333;
-                background-color: #fff;
-                margin: 0;
-                padding: 0;
-            }
+                </div> <!-- download app content -->
+            </div> <!-- download app -->
+        </div> <!-- container -->
+        <div class="download_app_image d-none d-lg-flex align-items-end">
+            <div class="image wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                <img src="https://developer.android.com/static/images/mad/mad-hero.svg" alt="download">
+            </div> <!-- image -->
+        </div> <!-- download app image -->
+    </section>
+    <footer id="footer" class="footer-area">
+        <div class="footer-widget">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-logo-support d-md-flex align-items-end justify-content-between">
+                            <div class="footer-logo d-flex align-items-end">
+                                <a class="mt-30" href="index.html"><img
+                                        src="https://img.icons8.com/external-rabit-jes-outline-color-rabit-jes/62/null/external-note-mobile-rabit-jes-outline-color-rabit-jes.png" /></a>
 
-            .hero {
-                border: 1px solid #e5e5e5;
-                border-radius: 10px;
-                margin-top: 80px;
-                background-color: #EEF2F5;
-            }
+                                <ul class="social mt-30">
+                                    <li><a target="_blank" href="https://praveen.selfmade.one/"><i
+                                                class="lni-hand"></i></a></li>
+                                    <li><a target="_blank" href="https://www.instagram.com/praveen.ms_13/"><i
+                                                class="lni-instagram-original"></i></a></li>
+                                    <li><a target="_blank" href="https://github.com/Praveenms13"><i
+                                                class="lni-github"></i></a></li>
+                                    <li><a target="_blank"
+                                            href="https://www.linkedin.com/in/m-s-praveen-kumar-9036671bb/?original_referer=https%3A%2F%2Fpraveen.selfmade.one%2F"><i
+                                                class="lni-linkedin-original"></i></a></li>
+                                    <li><a target="_blank" href="https://twitter.com/Praveen61041635"><i
+                                                class="lni-twitter-original"></i></a></li>
+                                    <li><a target="_blank"
+                                            href="https://open.spotify.com/playlist/5gI1ovoZO4R73hTicTzeqY"><i
+                                                class="lni-spotify-original"></i></a></li>
+                                </ul>
+                            </div> <!-- footer logo -->
 
-            @media screen and (max-width: 500px) {
-                .hero {
-                    border: 0px solid #e5e5e5;
-                    background-color: #fff;
-                    margin-top: 10px;
-                }
-            }
-        </style>
+                        </div> <!-- footer logo support -->
+                    </div>
+                </div> <!-- row -->
+                <div class="row">
+                    <div class="col-lg-2 col-md-4 col-sm-6">
+                        <div class="footer-link">
+                            <h6 class="footer-title">I'am</h6>
+                            <ul>
+                                <li><a href="https://praveen.selfmade.one/">About</a></li>
+                                <li><a href="https://www.instagram.com/praveen.ms_13/">Contact</a></li>
+                            </ul>
+                        </div> <!-- footer link -->
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="footer-link">
+                            <h6 class="footer-title">Products</h6>
+                            <ul>
+                                <li><a href="https://github.com/Praveenms13">Git</a></li>
+                            </ul>
+                        </div> <!-- footer link -->
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-5">
+                        <div class="footer-link">
+                            <h6 class="footer-title">Report a Bug</h6>
+                            <ul>
+                                <li><a href="#">Support</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div> <!-- footer link -->
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-7">
+                        <div class="footer-newsletter">
+                            <h6 class="footer-title">Subscribe For more Products !</h6>
+                            <div class="newsletter">
+                                <form action="#">
+                                    <input type="text" placeholder="Your Email">
+                                    <button type="submit"><i class="lni-angle-double-right"></i></button>
+                                </form>
+                            </div>
+                        </div> <!-- footer newsletter -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer widget -->
 
-
-        <a name="basic/hero-dynamic-1" style="position:absolute;"></a>
-        <div class="hero with-image">
-            <div class="row">
-                <div class="content-container clearfix">
-                    <div class="content">
-                        <h1>
-                            Get more from your note-taking app
-                        </h1>
-                        <div class="description">
-                            Capture important ideas and information in ways that help you stay productive.
-                        </div>
-                        <div class="cta">
-                            <a href="UserAuth/signupUser.php" class="button-primary">
-                                Sign up for free
-                            </a>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright text-center">
+                            <p class="text">Template Crafted by <a rel="nofollow"
+                                    href="https://praveen.selfmade.one/">Praveen</a></p>
                         </div>
                     </div>
-                    <div class="image">
-                        <img class="desktop-only image" src="./_resources/images/note_app_hero_image@2x.png" alt="Evernote&#39;s online note-taking app">
-                        <img class="mobile-only image" src="./_resources/images/note_app_hero_image@2x.png" alt="Evernote&#39;s online note-taking app">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <aside class="bg-danger bg-gradient rounded-3 p-4 p-sm-5 mt-5">
-                <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
-                    <div class="mb-4 mb-xl-0">
-                        <div class="fs-3 fw-bold text-white">New products is on the way.</div>
-                        <div class="text-white-50">Sign up for the newsletter for the latest updates.
-                        </div>
-                    </div>
-                    <div class="ms-xl-4">
-                        <div class="input-group mb-2">
-                            <input class="form-control" type="text" placeholder="Email address..." aria-label="Email address..." aria-describedby="button-newsletter">
-                            <button class="btn btn-outline-light" id="button-newsletter" type="button">Sign
-                                up</button>
-                        </div>
-                        <div class="small text-white-50">We care about privacy, and will never share
-                            your data.
-                        </div>
-                    </div>
-                </div>
-            </aside>
-        </div>
-        <br><br>
-        <footer class="py-4 bg-light mt-auto">
-            <div class="container-fluid px-4">
-                <div class="d-flex align-items-center justify-content-between small">
-                    <div class="text-muted">Copyright © Praveen`s Notes WebApp 2023</div>
-                    <div>
-                        <a href="#">API</a>
-                        ·
-                        <a href="#">Git Documentation</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer copyright -->
+    </footer>
+    <a class="back-to-top" href="#"><i class="lni-chevron-up"></i></a <script
+        src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+
+    <!--====== Scrolling Nav js ======-->
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/scrolling-nav.js"></script>
+
+    <!--====== Magnific Popup js ======-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
