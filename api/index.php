@@ -41,7 +41,7 @@ class API extends REST
         return false;
     }
 
-    public function IgetUsername()
+    public function getUsername()
     {
         return $_SESSION['username'];
     }

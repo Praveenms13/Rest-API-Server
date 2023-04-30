@@ -4,12 +4,10 @@ ${basename(__FILE__, ".php")} = function () {
     if ($this->isAuthenticated()) {
         $data = [
             "Status" => "Already logged in :)",
-            "Username" => $this->IgetUsername()
+            "Username" => $this->getUsername()
         ];
         $this->response($this->json($data), 200);
-    } else {
-        echo "Not Authenticated\n";
-    }
+    } 
     if ($this->get_request_method() == "POST") {
         if (isset($this->_request['username']) and isset($this->_request['password'])) {
             $username = $this->_request['username'];
