@@ -79,7 +79,7 @@ class API extends REST
         $func = strtolower(trim(str_replace("", "", $_REQUEST['method'])));
         if ((int)method_exists($this, $func) > 0) {
             $this->$func();
-        } else {
+        } else { 
             //$this->response('', 400);   removed by me for testing
             //below code added for anonymous function which is not in the class
             if (1) {//--------------------------------------------------------------------------------------------

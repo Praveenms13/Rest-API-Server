@@ -39,5 +39,3 @@ class User
         return $this->user['password'];
     }
 }
-
-$a = new User("praveen");

@@ -1,6 +1,6 @@
 <?php
 
-include("../verify.php");
+// include("../verify.php");
 
 //------------------including the notes framework-------------------------------------------------------------------------------
 require_once(realpath(dirname(__FILE__)) . "/Folder.class.php");
@@ -23,7 +23,8 @@ class Signup
     private $password;
     private $email;
     private $db;
-
+    public $id;
+    public $token;
 
     public function __construct($username, $password, $email)
     {
@@ -72,7 +73,7 @@ class Signup
             session_start();
             $_SESSION['username'] = $this->username;
             $folder->createNew("Default Folder");
-        //------------------End of creating the default folder-------------------------------------------------------------------------------
+            //------------------End of creating the default folder-------------------------------------------------------------------------------
         } else {
             throw new Exception("Unable to signup");
         }
