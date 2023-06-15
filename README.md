@@ -2,7 +2,6 @@
 
 ### API Base Url: https://apis.selfmade.one
 ### View : 
-![alt text](_resources/images/view.png)
 This Repo has only Backend codes for the notes app(Soon it'll be available as python app or android app) which follows OAuth 2.0, REST API Protocols.
 
 ## Login API
