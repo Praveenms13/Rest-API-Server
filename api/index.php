@@ -76,13 +76,13 @@ class API extends REST
     public function processApi()
     {
         //ALERT!!...   to prevent the sql injection here
-        $func = strtolower(trim(str_replace("", "", $_REQUEST['method'])));
+        $func = strtolower(trim(str_replace("/", "", $_REQUEST['method']))); // TODO: If api doesnt works remove / from the line 
         if ((int)method_exists($this, $func) > 0) {
             $this->$func();
         } else { 
             //$this->response('', 400);   removed by me for testing
             //below code added for anonymous function which is not in the class
-            if (1) {//--------------------------------------------------------------------------------------------
+            if (isset($_GET['namespace'])) {//--------------------------------------------------------------------------------------------
                 $dir = __DIR__ . "/api_xtensions" . $_GET['namespace'];
                 $CheckMethod = scandir(__DIR__ . "/api_xtensions" . $_GET['namespace']);
                 $file = $dir . "/$func"  . '.php';
