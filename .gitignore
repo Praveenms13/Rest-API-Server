@@ -1,14 +1,10 @@
 # Ignored Files
 
-api/.htaccess
-
 api/libs/Auth.class.php
 
 api/libs/OAuth.class.php
 
 api/REST.api.php
-
-.htaccess
 
 REST_API_Framework/
 

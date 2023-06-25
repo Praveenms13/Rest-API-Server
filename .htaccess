@@ -1,0 +1,20 @@
+RewriteBase /
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-s
+RewriteRule ^(.*)$ api/index.php?method=$1 [QSA,NC,L]
+RewriteRule ^/?api/([^/]+)/([^/]+)?$ api/index.php?method=$2&namespace=$1 [QSA,NC,L]
+
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.*)$ api/index.php [QSA,NC,L]
+
+RewriteCond %{REQUEST_FILENAME} -s
+RewriteRule ^(.*)$ api/index.php [QSA,NC,L]
+
+
+
+
+# https://apis.selfmade.one/api/index.php?method=user_exist  -----  without .htaccess
+
+# https://apis.selfmade.one/api/user_exist   -------    with .htaccess
