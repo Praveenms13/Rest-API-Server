@@ -72,15 +72,16 @@ class API extends REST
         if ((int)method_exists($this, $func) > 0) {
             $this->$func();
         } else {
-            $dir = __DIR__ . "/api_xtensions";
-            $file = $dir . "/$func"  . '.php';
-            if (file_exists($file)) {
-                include $file;
-                $func = explode("/", $func)[1];
-                $this->current_call = Closure::bind(${$func}, $this, get_class());
-                $this->$func();
-            } else {
-                $this->response($this->json(['error' => 'method_not_found']), 404);
+            if (isset($_GET['namespace'])) {
+                $dir = $_SERVER['DOCUMENT_ROOT'] . '/api/api_xtensions/' . $_GET['namespace'];
+                $file = $dir . '/' . $func . '.php';
+                if (file_exists($file)) {
+                    include $file;
+                    $this->current_call = Closure::bind(${$func}, $this, get_class());
+                    $this->$func();
+                } else {
+                    $this->response($this->json(['error' => 'method_not_found...']), 404);
+                }
             }
         }
     }
