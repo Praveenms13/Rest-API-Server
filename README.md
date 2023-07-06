@@ -1,6 +1,6 @@
-# API Based Notes App - Under Development 
+# API Based Notes App
 
-### API Base Url: https://apis.selfmade.one
+### API Base Url: https://restapi.praveenms.site
 ### View : 
 This Repo has only Backend codes for the notes app(Soon it'll be available as python app or android app) which follows OAuth 2.0, REST API Protocols.
 

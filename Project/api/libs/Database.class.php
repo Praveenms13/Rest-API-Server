@@ -6,7 +6,7 @@ class Database
     public static function getConnection()
     {
         if (Database::$connection == null) {
-            $config = file_get_contents(realpath(dirname(__FILE__)) . "/../../../../config_files/api.json");
+            $config = file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/../../../config_files/api.json");
             $config = json_decode($config, true);
             $server = $config["server"];
             $user = $config["user"];

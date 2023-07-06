@@ -3,7 +3,7 @@
 require_once "Database.class.php";
 require_once "Shares.class.php";
 require_once "Notes.class.php";
-require_once realpath(dirname(__FILE__)) . '/../../../../vendor/autoload.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . "/../WorkSpaceConfiguration/vendor/autoload.php";
 
 use Carbon\Carbon;
 

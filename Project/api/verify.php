@@ -1,5 +1,5 @@
 <?php
-
+echo "<h1>Verifying Email....</h1>";
 $FunCall = new REST();
 $token = $FunCall->cleanInputs($_GET['token']);
 try {
