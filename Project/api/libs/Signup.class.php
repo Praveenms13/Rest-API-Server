@@ -104,7 +104,7 @@ class Signup
             $sendgrid_api_key = $config['sendgrid_api_key'];
             $host_email = $config['mail_acc'];
             $email = new \SendGrid\Mail\Mail();
-            $email->setFrom($host_email, "Notes App");
+            $email->setFrom($host_email, "Authentication API");
             $email->setSubject("Verify Your Email !");
             $email->addTo($email_account, "Notes App");
             $email->addContent(
@@ -113,7 +113,7 @@ class Signup
                 <div class='card'>
                     <h1>Hii, $this->username</h1>
                     <p>Please verify your email by clicking the link below:</p>
-                    <a href='https://restapi.praveenms.site/api/verify?token=$token'>Verify Email</a>
+                    <a href='https://restapi.praveenms.live/api/verify?token=$token'>Verify Email</a>
                 </div>
             </body>"
             );

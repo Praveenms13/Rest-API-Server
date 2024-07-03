@@ -10,10 +10,11 @@ class User
     {
         $this->db = Database::getConnection();
         $this->username = $username;
-        $query = "SELECT * FROM `API` WHERE `username` = '$this->username' OR `email_address` = '$this->username'";
+        $query = "SELECT * FROM `API` WHERE `username` = '$this->username' OR `email_address` = '$this->username' OR `id` = '$this->username'";
         $result = $this->db->query($query);
         if ($result->num_rows > 0) {
             $this->user = $result->fetch_assoc();
+            return $this->user;
         } else {
             throw new Exception("User not found......");
         }
@@ -25,7 +26,7 @@ class User
     }
 
     public function getName()
-    {
+    { 
         return $this->user['username'];
     }
 

@@ -29,7 +29,7 @@ ${basename(__FILE__, ".php")} = function () {
                 }
             } catch (Exception $e) {
                 $data = [
-                    "Status" => "Bad Request...",
+                    "Status" => "Issue Raised !",
                     "Internal Error" => $e->getMessage()
                 ];
                 $this->response($this->json($data), 406);

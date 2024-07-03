@@ -27,12 +27,11 @@ class Auth  //OAuth can be used to generate new access tokens
         if ($this->isAuthToken) {
             $this->oauth_token = new OAuth($this->Token);
             $this->oauth_token->authenticate(); 
-        } elseif (!$this->isAuthToken) {
-            $user = new User($this->username);
+        } elseif (!$this->isAuthToken) { 
+            $user = new User($this->username); 
             $this->username = $user->getName();
-            if (password_verify($this->password, $user->getPasswordHash())) {
+            if (password_verify($this->password, $user->getPasswordHash())) { 
                 if ($this->isActive()) {
-                    $this->username = $user->getName();
                     $this->Logintoken = $this->addSession();
                 } else {
                     throw new Exception("User not verified, Kindly verify your email address");
