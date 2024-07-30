@@ -8,7 +8,7 @@ ${basename(__FILE__, ".php")} = function () {
         ];
         $this->response($this->json($data), 200);
     } 
-    if ($this->get_request_method() == "POST") {
+    if ($this->get_request_method() == "POST") { 
         if (isset($this->_request['username']) and isset($this->_request['password'])) {
             $username = $this->_request['username'];
             $password = $this->_request['password'];
@@ -36,7 +36,7 @@ ${basename(__FILE__, ".php")} = function () {
             }
         } else {
             $data = [
-                "Status" => "Invalid Inputs:(, isset failed"
+                "Status" => "Invalid Inputs:(, Exception Failed"
             ];
             $this->response($this->json($data), 417);
         }

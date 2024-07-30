@@ -161,7 +161,7 @@ class API extends REST
 // Initiiate Library
 
 $api = new API();
-try {
+try { 
     $api->auth();
     //$api->isAuthenticated();
     $api->processApi();
