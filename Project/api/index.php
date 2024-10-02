@@ -55,7 +55,7 @@ class API extends REST
             "Created at Not Found" or
             "Updated at Not Found" or
             "Owner Not Found" or
-            "Folder Not Found, Please check the the thing once again..." or
+            "Folder Not Found, Please check the thing once again..." or
             "Database Error"
         )) {
             $response_code = 404;

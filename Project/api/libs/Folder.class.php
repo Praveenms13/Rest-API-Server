@@ -93,7 +93,7 @@ class Folder extends Share
                     }
                     $this->id = $this->data['id'];
                 } else {
-                    throw new Exception("Folder Not Found, Please check the the thing once again...");
+                    throw new Exception("Folder Not Found, Please check the thing once again...");
                 }
             } else {
                 throw new Exception("Database Error");

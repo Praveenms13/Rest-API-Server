@@ -19,6 +19,19 @@ CREATE TABLE `API` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
+DROP TABLE IF EXISTS `API_Notes`;
+CREATE TABLE `API_Notes` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `folder_id` int NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `body` text NOT NULL,
+  `owner` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
 DROP TABLE IF EXISTS `API_Notes_Folder`;
 CREATE TABLE `API_Notes_Folder` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -51,4 +64,4 @@ CREATE TABLE `Admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- 2024-07-03 06:38:13
+-- 2024-10-02 03:01:22

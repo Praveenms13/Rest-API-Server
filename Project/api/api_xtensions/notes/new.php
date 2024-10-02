@@ -1,7 +1,7 @@
 <?php
 
-${basename(__FILE__, '.php')} = function () {
-    if ($this->get_request_method() == "POST") {
+${basename(__FILE__, '.php')} = function () { 
+    if ($this->get_request_method() == "POST") { 
         if ($this->isAuthenticated()) {
             if (isset($this->_request['folder_id']) and isset($this->_request['title']) and isset($this->_request['body'])) {
                 $title = $this->_request['title'];
